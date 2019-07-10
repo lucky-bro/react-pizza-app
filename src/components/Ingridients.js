@@ -2,7 +2,6 @@ import React from 'react';
 import IngridientList from './IngridientList';
 
 const Ingridients = props => {
-
     return (
         <div className="Ingridients">
             <h3>{props.title}</h3>
@@ -16,4 +15,4 @@ const Ingridients = props => {
     );
 };
 
-export default Ingridients;
+export default Ingridients

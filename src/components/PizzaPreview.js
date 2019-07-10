@@ -14,13 +14,12 @@ const PizzaPreview = ({title, ingridients}) => {
             <div className="Ingridients-icons">
                 {ingridientsItems}
             </div>
-
         </div>
-    );
-};
+    )
+}
 
 PizzaPreview.propTypes = {
-    title: PropTypes.string.isRequired,
-};
+    title: PropTypes.string.isRequired
+}
 
-export default PizzaPreview;
+export default PizzaPreview

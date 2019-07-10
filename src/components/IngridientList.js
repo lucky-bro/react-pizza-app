@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IngridientList = ({ ingridients, ingridientClick,selected }) => {
+const IngridientList = ({ ingridients, ingridientClick, selected }) => {
     return (
         <div className="IngridientList">
                 { 
@@ -25,7 +25,7 @@ const IngridientList = ({ ingridients, ingridientClick,selected }) => {
                     })
                 }
         </div>
-    );
-};
+    )
+}
 
-export default IngridientList;
+export default IngridientList

@@ -7,4 +7,4 @@ const OrderButton = () => (
     </div>
 );
 
-export default OrderButton;
+export default OrderButton

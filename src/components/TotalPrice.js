@@ -1,11 +1,11 @@
 import React from 'react';
 
-const TotalPrice = ({Total}) => {
+const TotalPrice = ({total}) => {
     return (
         <div className="total-price">
-            <h3>Total price: ${Total}</h3>
+            <h3>Total price: ${total}</h3>
         </div>
     );
 };
 
-export default TotalPrice;
+export default TotalPrice

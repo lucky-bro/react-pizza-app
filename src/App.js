@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { HashRouter as Router, Route } from "react-router-dom";
-import  Header from './components/Header';
-import  Index from './components/Index';
-import  OrderConfirm from './components/OrderConfirm';
-import  ThankYou from './components/ThankYou';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { HashRouter as Router, Route } from "react-router-dom"
+import  Header from './components/Header'
+import  Index from './components/Index'
+import  OrderConfirm from './components/OrderConfirm'
+import  ThankYou from './components/ThankYou'
+import './App.css'
 
-const PizzaIngridients = [
+const pizzaIngridients = [
 	{ name: "Mozzarella", price: 3 },
 	{ name: "Cheddar", price: 3.5 },
 	{ name: "Corn", price: 1.5 },
@@ -17,53 +16,43 @@ const PizzaIngridients = [
 	{ name: "Chicken", price: 2.5 },
 	{ name: "Beef", price: 5 },
 	{ name: "Fish", price: 4 }
-];
+]
 
 const App = props => {
 
-  	const [SelectedIngridients, setSelectedIngridients] = useState([]);
-  	const [Total, setTotal] = useState(0); 
-	const [UserName, setUserState] = useState('');
-	const [Address, setAddressState] = useState('');
-	
+  	const [selectedIngridients, setSelectedIngridients] = useState([])
+  	const [total, setTotal] = useState(0)
+	const [userName, setUserState] = useState('')
+	const [address, setAddressState] = useState('')
 
   	const ingridientClick = title => {
-		let idx = PizzaIngridients.findIndex(x => x.name === title);
-		let price = PizzaIngridients[idx]['price'];
-		let newTotal = 0;
-		if(SelectedIngridients.includes(title)) {
-			setSelectedIngridients(SelectedIngridients.filter(item => item !== title));
-			if(Total > 0) newTotal = (Total - price);
+		let idx = pizzaIngridients.findIndex(x => x.name === title)
+		let price = pizzaIngridients[idx]['price']
+		let newTotal = 0
+		if(selectedIngridients.includes(title)) {
+			setSelectedIngridients(selectedIngridients.filter(item => item !== title))
+			if(total > 0) newTotal = (total - price)
 		}
 		else {
-			setSelectedIngridients(SelectedIngridients => [...SelectedIngridients, title]);
-			newTotal = (Total + price);
+			setSelectedIngridients([...selectedIngridients, title])
+			newTotal = (total + price)
 		}
-		setTotal(newTotal);
+		setTotal(newTotal)
 	}
 
-	const MakeNewPizza = () => {
-		setSelectedIngridients([]);
-		setTotal(0);
+	const makeNewPizza = () => {
+		setSelectedIngridients([])
+		setTotal(0)
 	}
 
-	const ConfirmOrder = () => {
-		console.log('Confirm order');
-	}
-
-	const setUserName = name => {
-		setUserState(name);
-	}
-
-	const setAddress = address => {
-		setAddressState(address);
+	const confirmOrder = () => {
+		console.log('Confirm order')
 	}
 
 	return (
 		<Router>
 			<div className="App">
 				<Header 
-					logo={logo} 
 					title={props.title} 
 				/>
 				<div className="App-content">
@@ -72,10 +61,10 @@ const App = props => {
 						path="/" 
 						render={() => (
 							<Index 
-								SelectedIngridients={SelectedIngridients} 
-								PizzaIngridients={PizzaIngridients} 
+								selectedIngridients={selectedIngridients} 
+								pizzaIngridients={pizzaIngridients} 
 								ingridientClick={name => ingridientClick(name)}
-								Total={Total}
+								total={total}
 							/>  
 						)}  
 					/>
@@ -83,12 +72,12 @@ const App = props => {
 						path="/order" 
 						render={() => (
 							<OrderConfirm 
-								Total={Total}
-								UserName={UserName}
-								Address={Address} 
-								ConfirmOrder={()=> ConfirmOrder()}
-								setUserName={name=> setUserName(name)}
-								setAddress={address=> setAddress(address)}
+								total={total}
+								userName={userName}
+								address={address} 
+								confirmOrder={()=> confirmOrder()}
+								setUserName={name=> setUserState(name)}
+								setAddress={address=> setAddressState(address)}
 							/>
 						)}
 					/>
@@ -96,16 +85,16 @@ const App = props => {
 						path="/thanks" 
 						render={() => (
 							<ThankYou 
-								MakeNewPizza={() => MakeNewPizza()}
-								UserName={UserName}
+								makeNewPizza={() => makeNewPizza()}
+								userName={userName}
 							/>
 						)}
 					/>					
 				</div>
 			</div>
 		</Router>
-	);
+	)
 }
 
 
-export default App;
+export default App

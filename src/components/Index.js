@@ -4,25 +4,25 @@ import  Ingridients from './Ingridients';
 import  TotalPrice from './TotalPrice';
 import  OrderButton from './OrderButton';
 
-const Index = ({SelectedIngridients,PizzaIngridients,ingridientClick,Total}) => {
+const Index = ({selectedIngridients,pizzaIngridients,ingridientClick,total}) => {
     return(
         <div>
             <PizzaPreview 
                 title='You choose:' 
-                ingridients={SelectedIngridients}
+                ingridients={selectedIngridients}
             />
             <Ingridients 
-                ingridients={PizzaIngridients}
-                selected={SelectedIngridients} 
+                ingridients={pizzaIngridients}
+                selected={selectedIngridients} 
                 title='Select ingridients:' 
                 ingridientClick={ name => ingridientClick(name)} 
             />
             <TotalPrice 
-                Total={Total} 
+                total={total} 
             />
-            { Total > 0 ? <OrderButton /> : null } 
+            { total > 0 ? <OrderButton /> : null } 
         </div>
     )
 }
 
-export default Index;
+export default Index
