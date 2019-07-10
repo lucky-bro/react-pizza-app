@@ -1,12 +1,13 @@
-## React pizza app
+# React pizza app
 
 https://topmans.github.io/react-pizza-app/
 
 Created to learn React and for fun :)
 
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# Table of Contents
+## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
