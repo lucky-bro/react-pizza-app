@@ -1,8 +1,8 @@
-import React from 'react';
-import  PizzaPreview from './PizzaPreview';
-import  Ingridients from './Ingridients';
-import  TotalPrice from './TotalPrice';
-import  OrderButton from './OrderButton';
+import React from 'react'
+import  PizzaPreview from './PizzaPreview'
+import  Ingridients from './Ingridients'
+import  TotalPrice from './TotalPrice'
+import  OrderButton from './OrderButton'
 
 const Index = ({selectedIngridients,pizzaIngridients,ingridientClick,total}) => {
     return(

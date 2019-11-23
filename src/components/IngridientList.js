@@ -1,4 +1,23 @@
-import React from 'react';
+import React from 'react'
+import styled from 'styled-components'
+
+const StyledButton = styled.button `
+    display: inline-block;
+    padding: 5px 10px;
+    width: 200px;
+    cursor: pointer;
+    margin:0 5px 10px 0;
+
+    &.active {
+        background-color: #de7b00;
+        color: #ffffff;
+        padding: 6px;
+        border: 1px solid #a24e25;
+        border-radius: 2px;
+        font-size: 13px;
+        text-shadow: 1px 1px #ad3410;        
+    }
+`
 
 const IngridientList = ({ ingridients, ingridientClick, selected }) => {
     return (
@@ -10,7 +29,7 @@ const IngridientList = ({ ingridients, ingridientClick, selected }) => {
                         
                         return (    
                             <div key={index}>
-                                <button
+                                <StyledButton
                                     className={activeClass ? 'active' : ''} 
                                     key={index} 
                                     value={data.name} 
@@ -19,7 +38,7 @@ const IngridientList = ({ ingridients, ingridientClick, selected }) => {
                                     }}
                                 >
                                     {data.name} ,  ${data.price} 
-                                </button><br />
+                                </StyledButton><br />
                             </div>
                         );
                     })

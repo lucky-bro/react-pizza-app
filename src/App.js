@@ -4,7 +4,19 @@ import  Header from './components/Header'
 import  Index from './components/Index'
 import  OrderConfirm from './components/OrderConfirm'
 import  ThankYou from './components/ThankYou'
-import './App.css'
+import styled from 'styled-components'
+
+const AppWrap = styled.div `
+	text-align: center;
+	a {
+		color: #4481e0;
+	}	
+`
+
+const AppContent = styled.div `
+	max-width: 800px;
+	margin:20px auto;	
+`
 
 const pizzaIngridients = [
 	{ name: "Mozzarella", price: 3 },
@@ -51,11 +63,11 @@ const App = props => {
 
 	return (
 		<Router>
-			<div className="App">
+			<AppWrap>
 				<Header 
 					title={props.title} 
 				/>
-				<div className="App-content">
+				<AppContent>
 					<Route 
 						exact 
 						path="/" 
@@ -90,8 +102,8 @@ const App = props => {
 							/>
 						)}
 					/>					
-				</div>
-			</div>
+				</AppContent>
+			</AppWrap>
 		</Router>
 	)
 }

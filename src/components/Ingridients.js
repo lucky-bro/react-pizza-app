@@ -1,9 +1,15 @@
-import React from 'react';
-import IngridientList from './IngridientList';
+import React from 'react'
+import IngridientList from './IngridientList'
+import styled from 'styled-components'
+
+const StyledIngridients = styled.div `
+    width: 50%;
+    display: inline-block;
+`
 
 const Ingridients = props => {
     return (
-        <div className="Ingridients">
+        <StyledIngridients>
             <h3>{props.title}</h3>
             
             <IngridientList 
@@ -11,8 +17,8 @@ const Ingridients = props => {
                 selected={props.selected} 
                 ingridientClick={ name => props.ingridientClick(name)} 
             />
-        </div>
-    );
-};
+        </StyledIngridients>
+    )
+}
 
 export default Ingridients
