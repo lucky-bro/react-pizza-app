@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8432e83bf1ae72e330e108993adca335",
+    "revision": "48f8ee6b0ac77831cb2adbe44e9b0ef9",
     "url": "/react-pizza-app/index.html"
   },
   {
-    "revision": "53a6dbe2d2b3e6fb9d2b",
+    "revision": "4085de89795a3e69f431",
     "url": "/react-pizza-app/static/css/main.2d275b14.chunk.css"
   },
   {
-    "revision": "0cd4eb420bd422a58a18",
-    "url": "/react-pizza-app/static/js/2.e4c1d755.chunk.js"
+    "revision": "974c7eccaa66bd001572",
+    "url": "/react-pizza-app/static/js/2.bcfc21ef.chunk.js"
   },
   {
-    "revision": "53a6dbe2d2b3e6fb9d2b",
-    "url": "/react-pizza-app/static/js/main.22bfa6cd.chunk.js"
+    "revision": "4085de89795a3e69f431",
+    "url": "/react-pizza-app/static/js/main.8f2c135f.chunk.js"
   },
   {
-    "revision": "b22c7be2ef430ecbe054",
-    "url": "/react-pizza-app/static/js/runtime~main.cfe1ee2b.js"
+    "revision": "95b1f2009e35f1355316",
+    "url": "/react-pizza-app/static/js/runtime-main.385b1ae4.js"
   },
   {
     "revision": "18508e6012804bed65b8c2cf61af780a",
