@@ -17,7 +17,7 @@ const StyledGreenBtn = styled.button `
 `
 
 const Button = props => (
-    <StyledGreenBtn className={props.className} type={props.type ? props.type : 'button'} disabled={props.disabled ? props.disabled : ''}>{props.title}</StyledGreenBtn>
+    <StyledGreenBtn className={props.className} type={props.type} disabled={props.disabled ? props.disabled : ''}>{props.children}</StyledGreenBtn>
 )
 
 export default Button

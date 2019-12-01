@@ -26,7 +26,7 @@ const OrderConfirm = ({total, confirmOrder, userName, address, setUserName, setA
             <StyledInput type="text" className="User-address" value={address} placeholder="Address" required onChange={e => setAddress(e.target.value)}/>
             <p className="Amount">Total amount: ${total}</p>
             <Link to="/thanks" onClick={ () => confirmOrder()}>
-                <StyledButton type="submit" disabled={disabled} title="Confirm order"/>
+                <StyledButton type="submit" disabled={disabled} >Confirm order</StyledButton>
             </Link>
             <br/>
             <Link to="/">Back</Link>

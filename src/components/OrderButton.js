@@ -10,7 +10,7 @@ const OrderButtonWrap = styled.div `
 
 const OrderButton = () => (
     <OrderButtonWrap>
-        <Link to="/order"><Button title="Make order" /></Link>
+        <Link to="/order"><Button>Make order</Button></Link>
     </OrderButtonWrap>
 )
 
